@@ -35,4 +35,9 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(HorizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false; 
     }
+
+    private void Awake()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }
